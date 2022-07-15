@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soohyun & Hyunjik</title>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Soohyun & Hyunjik" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The wedding of Soohyun & Hyunjik"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="The wedding of Soohyun & Hyunjik" />
+    <meta name="keywords" content="Wedding" />
+    <meta name="author" content="Hyunjik Kim" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .title {
+        font-family: var(--font-title);
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+      }
+      .date-venue {
+        font-family: var(--font-venue);
+      }
+      a:hover {
+        color: rgb(100, 100, 100);
+      }
+      section {
+        margin-top: 0;
+        padding: 0;
+        font-family: var(--font-title), serif;
+        color: var(--text-color);
+        text-align: center;
+      }
+      .custom-hr {
+        border: none;
+        background-color: grey;
+        text-align: center;
+        height: 1px;
+        margin: 0;
+      }
+      .header-custom {
+        font-family: var(--font-kor), serif;
+      }
+      .about-subtitle,
+      .venue-subtitle,
+      .venue-subsubtitle {
+        font-family: var(--font-venue);
+      }
+      .korean-font {
+        font-family: var(--font-kor);
+      }
+      @media screen and (max-width: 400px) {
+        .column-two {
+          padding-left: 5vw;
+        }
+        .about-text {
+          font-size: 13px;
+        }
+      }
+    </style>
+    <script async src="map.js"></script>
+  </head>
+
+  <body>
+    <div class="paperOverlay"></div>
+    <div class="box-custom">
+      <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
+        <div class="paperOverlay"></div>
+        <div class="navbar-item column-one">
+          <a class="navbar-item-custom" href="gallery_eng.html"> gallery </a>
+        </div>
+        <div class="navbar-item column-two">
+          <a class="navbar-item-custom title" href="index_eng.html">
+            Soohyun <br />
+            & <br />
+            Hyunjik
+          </a>
+        </div>
+        <div class="navbar-item column-three">
+          <a class="navbar-item-custom korean-font" href="index.html"> 한글 </a>
+        </div>
+      </nav>
+      <div class="image-container">
+        <img class="image-smallscreen" src="images/main_photo.jpeg" />
+        <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />
+      </div>
+      <div class="date">
+        <img class="date-img" src="images/date.png" />
+      </div>
+      <div class="date-venue">
+        <span>
+          Sat 5.30 PM <br />
+          Seoul Westin Josun Hotel <br />
+          1F Grand Ballroom Hall
+        </span>
+      </div>
+    </div>
+    <section class="hero-custom">
+      <div class="about">
+        <img class="flowers" src="images/flowers.jpeg" />
+        <div class="about-subtitle green">Wedding Invitation</div>
+        <div class="about-text">
+          <span>
+            It was the fall of 2018, <br />
+            when a boy who seemed too outgoing to befriend <br />
+            met a girl who rushed back to her place shortly, <br />
+            saying she forgot to do the laundry. <br />
+            It is the summer of 2022, <br />
+            and the two are now getting married. <br />
+            It would make a great day, <br />
+            if you could join us <br />
+            at the beginning of this unexpected journey.
+          </span>
+        </div>
+        <div class="about-photo-box">
+          <img src="images/about_hyunjik.jpeg" class="about-photo" />
+          <img src="images/about_soohyun.jpeg" class="about-photo" />
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-box">
+          <div class="about-subtitle">Wedding Timeline</div>
+          <div class="about-timeline-box">
+            <img
+              src="images/wedding_timeline.jpeg"
+              class="about-timeline-image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="venue">
+        <div class="venue-subtitle">Venue</div>
+        <div class="hr-div">
+          <hr class="custom-hr" />
+        </div>
+        <div class="venue-text">
+          Seoul Westin Josun Hotel, <br />
+          Grand Ballroom Hall (1st floor)<br />
+          <br />
+          <b>Address</b>: Seoul Jung-gu Sogong-ro 106 <br />
+          <b>T</b>: 02-771-0500
+        </div>
+        <div id="map"></div>
+        <div class="transport-text">
+          <span class="venue-subsubtitle">Metro</span>
+          <br />
+          <span>
+            City Hall station (Line 1) exit 6 <br />
+            or <br />
+            Eulgiro 1-ga station (Line 2) exit 4.
+          </span>
+          <br /><br /><br />
+          <span class="venue-subsubtitle">Parking</span>
+          <br />
+          <span> Hotel parking lot available. </span>
+          <br /><br /><br />
+        </div>
+        <div class="hr-div2">
+          <hr class="custom-hr" />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span>Website designed by Soohyun & developed by Hyunjik</span>
+    </footer>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD63t9I7vwqdt_cvHXz1gJm-ryPmc2SDTY&callback=initMap"
+    ></script>
+    <script>
+      let darkBoxVisible = false;
+
+      window.addEventListener("load", (event) => {
+        let images = document.querySelectorAll(".about-photo");
+        if (images !== null && images !== undefined && images.length > 0) {
+          images.forEach(function (img) {
+            img.addEventListener("click", (evt) => {
+              showDarkbox(img.src);
+            });
+          });
+        }
+      });
+      function showDarkbox(url) {
+        if (!darkBoxVisible) {
+          // Create the darkBox
+          var div = document.createElement("div");
+          div.id = "darkbox";
+          div.innerHTML = '<img class="darkboximg" src="' + url + '" />';
+          document.body.appendChild(div);
+          let box = document.getElementById("darkbox");
+          box.addEventListener("click", (event) => {
+            // Remove it
+            let element = document.getElementById("darkbox");
+            element.parentNode.removeChild(element);
+
+            darkBoxVisible = false;
+          });
+
+          darkBoxVisible = true;
+        } else {
+          // Remove it
+          let element = document.getElementById("darkbox");
+          element.parentNode.removeChild(element);
+
+          darkBoxVisible = false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Soohyun & Hyunjik" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="The wedding of Soohyun & Hyunjik"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="The wedding of Soohyun & Hyunjik" />
+    <meta name="keywords" content="Wedding" />
+    <meta name="author" content="Hyunjik Kim" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+      .title {
+        font-family: var(--font-title);
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+      }
+      #gallery {
+        line-height: 0;
+        -webkit-column-count: 5;
+        -webkit-column-gap: 5px;
+        -moz-column-count: 5;
+        -moz-column-gap: 5px;
+        column-count: 5;
+        column-gap: 20px;
+      }
+      #gallery img {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+        filter: grayscale(100%);
+        /* transition: filter 2s; */
+      }
+      #gallery img:hover {
+        filter: none;
+      }
+      @media (max-width: 1200px) {
+        #gallery {
+          -moz-column-count: 4;
+          -webkit-column-count: 4;
+          column-count: 4;
+        }
+      }
+      @media (max-width: 1000px) {
+        #gallery {
+          -moz-column-count: 3;
+          -webkit-column-count: 3;
+          column-count: 3;
+        }
+      }
+      @media (max-width: 800px) {
+        #gallery {
+          -moz-column-count: 2;
+          -webkit-column-count: 2;
+          column-count: 2;
+        }
+      }
+      section {
+        padding: 0 1.5rem 0.5rem 1.5rem;
+      }
+      .box-custom {
+        height: auto;
+      }
+      .korean-font {
+        font-family: var(--font-kor);
+      }
+      @media screen and (max-width: 400px) {
+        .column-two {
+          padding-left: 5vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="paperOverlay"></div>
+    <div class="box-custom">
+      <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
+        <div class="paperOverlay"></div>
+        <div class="navbar-item column-one">
+          <a class="navbar-item-custom" href="gallery_eng.html"> Gallery </a>
+        </div>
+        <div class="navbar-item column-two">
+          <a class="navbar-item-custom title" href="index_eng.html">
+            Soohyun <br />
+            & <br />
+            Hyunjik
+          </a>
+        </div>
+        <div class="navbar-item column-three">
+          <a class="navbar-item-custom korean-font" href="index.html"> 한글 </a>
+        </div>
+      </nav>
+      <section class="hero-custom">
+        <div id="gallery">
+          <img src="images/gallery/image_1.jpeg" />
+          <img src="images/gallery/image_2.jpeg" />
+          <img src="images/gallery/image_3.jpeg" />
+          <!-- <img src="images/gallery/image_4.jpeg" /> -->
+          <img src="images/gallery/image_5.jpeg" />
+          <img src="images/gallery/image_6.jpeg" />
+          <img src="images/gallery/image_7.jpeg" />
+          <img src="images/gallery/image_8.jpeg" />
+          <img src="images/gallery/image_9.jpeg" />
+          <img src="images/gallery/image_10.jpeg" />
+          <img src="images/gallery/image_11.jpeg" />
+          <img src="images/gallery/image_12.jpeg" />
+          <img src="images/gallery/image_13.jpeg" />
+          <img src="images/gallery/image_14.jpeg" />
+          <img src="images/gallery/image_15.jpeg" />
+          <img src="images/gallery/image_16.jpeg" />
+          <img src="images/gallery/image_17.jpeg" />
+          <img src="images/gallery/image_18.jpeg" />
+          <img src="images/gallery/image_19.jpeg" />
+          <img src="images/gallery/image_20.jpeg" />
+          <img src="images/gallery/image_21.jpeg" />
+          <img src="images/gallery/image_22.jpeg" />
+          <img src="images/gallery/image_23.jpeg" />
+          <!-- <img src="images/gallery/image_24.jpeg" /> -->
+          <img src="images/gallery/image_25.jpeg" />
+          <img src="images/gallery/image_26.jpeg" />
+          <img src="images/gallery/image_27.jpeg" />
+          <img src="images/gallery/image_28.jpeg" />
+          <img src="images/gallery/image_29.jpeg" />
+          <img src="images/gallery/image_30.jpeg" />
+          <img src="images/gallery/image_31.jpeg" />
+          <img src="images/gallery/image_32.jpeg" />
+        </div>
+        <footer>
+          <span>Website designed by Soohyun & developed by Hyunjik</span>
+        </footer>
+      </section>
+    </div>
+
+    <script>
+      let darkBoxVisible = false;
+      let current_image_index;
+      let images = document.querySelectorAll("img");
+      let num_images = images.length;
+
+      window.addEventListener("load", (event) => {
+        if (images !== null && images !== undefined && images.length > 0) {
+          images.forEach(function (img, index) {
+            img.addEventListener("click", (ev) => {
+              showDarkbox(img.src);
+              current_image_index = index % num_images;
+            });
+          });
+        }
+      });
+
+      document.addEventListener("keydown", function (ev) {
+        if (darkBoxVisible) {
+          if (ev.keyCode === 37) {
+            current_image_index = (current_image_index - 1) % num_images;
+            replaceDarkboxImage(current_image_index);
+          } else if (ev.keyCode === 39) {
+            current_image_index = (current_image_index + 1) % num_images;
+            replaceDarkboxImage(current_image_index);
+          }
+        }
+      });
+
+      function replaceDarkboxImage(index) {
+        let box = document.getElementById("darkbox");
+        let url = images[index].src;
+        box.innerHTML = '<img class="darkboximg" src="' + url + '" />';
+      }
+
+      function showDarkbox(url) {
+        if (!darkBoxVisible) {
+          // Create the darkBox
+          var div = document.createElement("div");
+          div.id = "darkbox";
+          div.innerHTML = '<img class="darkboximg" src="' + url + '" />';
+          document.body.appendChild(div);
+          let box = document.getElementById("darkbox");
+          box.addEventListener("click", (event) => {
+            // Remove it
+            let element = document.getElementById("darkbox");
+            element.parentNode.removeChild(element);
+
+            darkBoxVisible = false;
+          });
+
+          darkBoxVisible = true;
+        } else {
+          // Remove it
+          let element = document.getElementById("darkbox");
+          element.parentNode.removeChild(element);
+
+          darkBoxVisible = false;
+        }
+      }
+    </script>
+  </body>
+</html>

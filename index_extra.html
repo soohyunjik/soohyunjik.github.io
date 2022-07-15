@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>김수현 & 김현직</title>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="utf-8" />
+    <meta property="og:title" content="김현직 & 김수현" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="저희 결혼식에 여러분을 초대합니다!"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="description" content="저희 결혼식에 여러분을 초대합니다!" />
+    <meta name="keywords" content="Wedding" />
+    <meta name="author" content="Hyunjik Kim" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .title {
+        font-family: var(--font-kor), serif;
+        line-height: 1.7;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+        /* font-style: italic; */
+      }
+      .date-venue {
+        font-family: var(--font-kor), serif;
+        letter-spacing: 0.1rem;
+      }
+      a:hover {
+        color: rgb(100, 100, 100);
+      }
+      section {
+        margin-top: 0;
+        padding: 0;
+        font-family: var(--font-kor), serif;
+        color: var(--text-color);
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .custom-hr {
+        border: none;
+        background-color: grey;
+        text-align: center;
+        height: 1px;
+        margin: 0;
+      }
+      .header-custom {
+        font-family: var(--font-kor), serif;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      label {
+        background: rgb(246, 236, 236);
+        color: rgb(215, 126, 132);
+        width: 280px;
+        height: 30px;
+        -webkit-appearance: push-button;
+        -moz-appearance: button;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .column-one,
+      .column-three {
+        width: 15%;
+      }
+      .column-two {
+        width: 70%;
+      }
+      .navbar-item-custom {
+        font-family: var(--font-kor);
+      }
+      .english-font {
+        font-family: var(--font-navbar);
+      }
+      .venue-subsubtitle {
+        font-family: var(--font-kor);
+      }
+      @media screen and (max-width: 400px) {
+        .date-venue {
+          padding-top: 20px;
+        }
+      }
+    </style>
+    <script async src="map.js"></script>
+  </head>
+
+  <body>
+    <div class="paperOverlay"></div>
+    <div class="box-custom">
+      <nav id="global-nav-custom" class="animated-custom slideInDown-custom">
+        <div class="paperOverlay"></div>
+        <div class="navbar-item column-one">
+          <a class="navbar-item-custom" href="gallery_extra.html"> 사진 </a>
+        </div>
+        <div class="navbar-item column-two">
+          <a class="navbar-item-custom title" href="index_extra.html">
+            김현직 & 김수현
+          </a>
+        </div>
+        <div class="navbar-item column-three">
+          <a class="navbar-item-custom english-font" href="index_eng.html"> EN </a>
+        </div>
+      </nav>
+      <div class="image-container">
+        <img class="image-smallscreen" src="images/main_photo.jpeg" />
+        <img class="image-bigscreen" src="images/main_photo_orig.jpeg" />  
+      </div>
+      <div class="date">
+        <img class="date-img" src="images/date.png" />
+      </div>
+      <div class="date-venue">
+        <span>
+          토요일 오후 5시30분<br />
+          서울 웨스틴 조선 호텔 <br />
+          1층 그랜드볼룸 홀
+        </span>
+      </div>
+    </div>
+    <section class="hero-custom">
+      <div class="about">
+        <img class="flowers" src="images/flowers.jpeg" />
+        <div class="about-subtitle green">초대합니다</div>
+        <div class="about-text">
+          <span>
+            2018년 가을 옥스포드 <br />
+            지나치게 사교적인 것 같아 <br />
+            친해지기 어려울 것 같아보였던 그와 <br />
+            처음 만난 자리에서 빨래를 널러 가야한다며 <br />
+            30분만에 자리를 뜬 그녀가
+            <br />
+            2022년 여름, 서울에서 결혼을 합니다. <br />
+            <!-- 서로가 너무나 다른 사람이라고 생각했던 첫 만남 이후로 <br>
+            우연을 계기로 의외의 공통점들을 발견하며 <br>
+            서서히 굉장히 많은 부분이 닮아있다는 걸 깨달았습니다. <br>
+            어느새 서로가 서로에게 없어선 안될 존재가 되어버렸고 <br>
+            인생의 동반자가 되기로 결심했습니다. <br> -->
+            그 시작에 여러분이 함께 해주신다면 <br />
+            더할 나위 없이 감사하겠습니다.
+          </span>
+        </div>
+        <div class="about-parents">
+          <b>김상식 &#8901 차윤희</b> 의 아들 <b>현직</b><br />
+          <b>김 &nbsp;&nbsp;평 &#8901 노숙희</b> 의 &nbsp;딸 &nbsp; <b>수현</b>
+        </div>
+        <div class="about-photo-box">
+          <img src="images/about_hyunjik.jpeg" class="about-photo" />
+          <img src="images/about_soohyun.jpeg" class="about-photo" />
+        </div>
+        <div class="no-thanks">
+          <span> * 축하 화환은 정중히 사양합니다 *</span>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-box">
+          <div class="about-subtitle">결혼 식순</div>
+          <div class="about-timeline-box">
+            <img
+              src="images/wedding_timeline_kor.jpeg"
+              class="about-timeline-image"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="venue">
+        <div class="venue-subtitle">오시는 길</div>
+        <div class="hr-div">
+          <hr class="custom-hr" />
+        </div>
+        <div class="venue-text">
+          서울 웨스틴 조선 호텔, 1층 그랜드볼룸 홀 <br />
+          서울특별시 중구 소공로 106<br />
+          <br />
+          <b>T</b>: 02-771-0500
+        </div>
+        <div id="map"></div>
+        <div class="transport-text">
+          <span class="venue-subsubtitle">지하철</span>
+          <br />
+          <span>
+            1호선 시청역 6번 출구 <br />
+            2호선 을지로1가역 4번 출구
+          </span>
+          <br /><br /><br />
+          <span class="venue-subsubtitle">주차</span>
+          <br />
+          <span> 호텔 주차장 이용 가능 </span>
+          <br /><br /><br />
+        </div>
+        <div class="hr-div2">
+          <hr class="custom-hr" />
+        </div>
+      </div>
+      <div class="about-subtitle">마음 전하실 곳</div>
+      <div class="bank-div">
+        <label for="toggle-1">
+          <div class="label-column"></div>
+          <div class="label-column">신랑측 계좌번호</div>
+          <div class="label-column">
+            <i class="fa-solid fa-angle-down transform-1"></i>
+          </div>
+        </label>
+        <input type="checkbox" id="toggle-1" />
+        <div class="bank-details one">
+          국민은행 358802-04-341097<br />
+          예금주: 김현직
+        </div>
+      </div>
+      <div class="bank-div">
+        <label for="toggle-2">
+          <div class="label-column"></div>
+          <div class="label-column">신부측 계좌번호</div>
+          <div class="label-column">
+            <i class="fa-solid fa-angle-down transform-2"></i>
+          </div>
+        </label>
+        <input type="checkbox" id="toggle-2" />
+        <div class="bank-details two">
+          국민은행 594802-96-103355<br />
+          예금주: 노숙희
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span>Website designed by Soohyun & developed by Hyunjik</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".bank-details").show();
+        $(".bank-details").hide();
+        $("#toggle-1").click(function () {
+          $(".transform-1").toggleClass("transform-active");
+          $(".bank-details.one").slideToggle();
+        });
+        $("#toggle-2").click(function () {
+          $(".transform-2").toggleClass("transform-active");
+          $(".bank-details.two").slideToggle();
+        });
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/493cc16663.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD63t9I7vwqdt_cvHXz1gJm-ryPmc2SDTY&callback=initMap"
+    ></script>
+    <script>
+      let darkBoxVisible = false;
+
+      window.addEventListener("load", (event) => {
+        let images = document.querySelectorAll(".about-photo");
+        if (images !== null && images !== undefined && images.length > 0) {
+          images.forEach(function (img) {
+            img.addEventListener("click", (evt) => {
+              showDarkbox(img.src);
+            });
+          });
+        }
+      });
+      function showDarkbox(url) {
+        if (!darkBoxVisible) {
+          // Create the darkBox
+          var div = document.createElement("div");
+          div.id = "darkbox";
+          div.innerHTML = '<img class="darkboximg" src="' + url + '" />';
+          document.body.appendChild(div);
+          let box = document.getElementById("darkbox");
+          box.addEventListener("click", (event) => {
+            // Remove it
+            let element = document.getElementById("darkbox");
+            element.parentNode.removeChild(element);
+
+            darkBoxVisible = false;
+          });
+
+          darkBoxVisible = true;
+        } else {
+          // Remove it
+          let element = document.getElementById("darkbox");
+          element.parentNode.removeChild(element);
+
+          darkBoxVisible = false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+:root {
+  --text-color: rgb(86, 70, 22);
+  --font: "copperplate";
+  --font-title: Palantino;
+  --font-navbar: "copperplatelight";
+  --font-venue: "copperplate";
+  --font-kor: "bareunbatang";
+  --header-footer-height: 8vh;
+  --left-right-padding: 4vw;
+  --background-color: rgb(253, 249, 246);
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "copperplatelight";
+  src: url("fonts/copperplate_light-webfont.woff2") format("woff2"),
+    url("fonts/copperplate_light-webfont.woff") format("woff");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "copperplate";
+  src: url("fonts/copperplate_light-webfont.woff2") format("woff2"),
+    url("fonts/copperplate_light-webfont.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "bareunbatang";
+  src: url("fonts/BareunBatangPro1.ttf") format("truetype");
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--background-color);
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #4a4a4a;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  position: relative;
+}
+.paperOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat;
+  background-image: url("images/white_plaster_texture.jpeg");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  opacity: 0.2;
+}
+.date {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 13px;
+}
+.date-img {
+  height: 50px;
+  width: auto;
+}
+.timeline {
+  /* top horizontal bottom */
+  padding: 2vh 2vw 14vh;
+}
+.venue {
+  padding: 2vh 2vw 6vh;
+}
+.about {
+  padding: 2vh 2vw 14vh;
+}
+.flowers {
+  width: 220px;
+}
+.green {
+  color: rgb(84, 140, 0);
+}
+.timeline {
+  display: flex;
+  justify-content: center;
+}
+.timeline-box {
+  width: 280px;
+  background-color: rgb(237, 238, 221);
+  /* top horizontal bottom */
+  padding-bottom: 4vh;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: var(--text-color);
+  font: var(--font);
+  text-align: center;
+  font-size: 0.8rem !important;
+  padding-top: 3vh;
+}
+
+#global-nav-custom {
+  background-color: transparent;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: var(--left-right-padding);
+  padding-right: var(--left-right-padding);
+  transition: height 0.5s, line-height 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: var(--background-color);
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.box-custom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+.navbar-item {
+  width: 33%;
+  display: block;
+  font-family: var(--font-navbar);
+}
+.column-one {
+  margin-left: auto;
+}
+.column-two {
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+.column-two::first-line {
+  line-height: 1.2;
+}
+.column-three {
+  margin-right: auto;
+  text-align: end;
+}
+.navbar-item-custom {
+  background-color: transparent;
+  color: var(--text-color);
+}
+.hero-custom {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.header-custom {
+  font-size: 6vh;
+  color: var(--text-color);
+  height: 10vh;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+.date-venue {
+  display: flex;
+  flex: 0 1 var(--header-footer-height);
+  text-align: center;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #363636;
+}
+
+@keyframes slideInDown-custom {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInDown-custom {
+  animation-name: slideInDown-custom;
+}
+
+.animated-custom {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.about-subtitle {
+  text-align: center;
+  width: 100%;
+  padding: 6vh 0;
+  font-weight: bold;
+}
+.extra-top-padding {
+  padding-top: 10vh;
+}
+.about-photo-box {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.about-photo {
+  width: 45%;
+  height: auto;
+  padding: 0 1vw;
+}
+.about-text {
+  text-align: center;
+  /* font-size: 14px; */
+  padding: 1vh 5vw 5vh;
+  width: 100%;
+  line-height: 2.5;
+}
+.about-timeline-box {
+  display: flex;
+  justify-content: center;
+}
+.about-timeline-image {
+  width: 260px;
+  height: auto;
+}
+.about-parents {
+  /* font-size:  */
+  padding: 20px 0 70px;
+  line-height: 2;
+}
+.no-thanks {
+  padding-top: 30px;
+}
+.venue-subtitle {
+  text-align: center;
+  padding-top: 4vh;
+  font-weight: bold;
+}
+.venue-subsubtitle {
+  line-height: 4;
+  font-weight: bold;
+}
+.hr-div {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr-div2 {
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-hr {
+  border: none;
+  background-color: grey;
+  text-align: center;
+  height: 1px;
+  margin: 0;
+  width: 200px;
+}
+.venue-text {
+  padding-top: 13px;
+  padding-bottom: 50px;
+}
+.transport-text {
+  padding-top: 6vh;
+}
+#map {
+  height: 50vh;
+  width: 100%;
+}
+.label-column:nth-child(1) {
+  width: 10%;
+  margin-left: auto;
+}
+.label-column:nth-child(2) {
+  width: 80%;
+  text-align: center;
+}
+.label-column:nth-child(3) {
+  width: 10%;
+  margin-right: auto;
+  text-align: center;
+}
+.bank-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1vh;
+  font-size: 14px;
+}
+.bank-details {
+  background: white;
+  color: rgb(89, 87, 87);
+  width: 280px;
+  height: 45px;
+  display: none;
+}
+.transform-1 {
+  transition: all 0.2s ease;
+}
+.transform-2 {
+  transition: all 0.2s ease;
+}
+.transform-active {
+  transform: rotateZ(180deg);
+}
+#darkbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.darkboximg {
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 1001;
+}
+@media screen and (min-width: 800px) {
+  .image-smallscreen {
+    display: none;
+  }
+  .image-bigscreen {
+    height: 80vh;
+    width: 100%;
+    object-fit: contain;
+    padding: 100px 3vw 2vh;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .about {
+    padding-top: 10vh;
+  }
+  .about-parents {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .image-smallscreen {
+    margin-top: 100px;
+    margin-bottom: 19px;
+    width: 100vw;
+  }
+  .image-bigscreen {
+    display: none;
+  }
+  .box-custom {
+    height: 600px;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 400px) {
+  .image-smallscreen {
+    width: 400px;
+  }
+  .date-venue {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .about-parents {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .about-text {
+    font-size: 14px;
+  }
+  .about-parents {
+    font-size: 16px;
+  }
+  .navbar-item-custom {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .date-venue {
+    font-size: 16px;
+  }
+  .about-subtitle,
+  .venue-subtitle {
+    font-size: 16px;
+  }
+  .bank-div {
+    font-size: 14px;
+  }
+}
